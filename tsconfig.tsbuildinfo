@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/CardScanner.tsx","./src/components/LeadForm.tsx","./src/components/LeadsList.tsx","./src/components/PaymentShare.tsx","./src/components/RevenueHeader.tsx","./src/lib/format.ts","./src/lib/leads.ts","./src/lib/ocr.ts","./vite.config.ts"],"version":"5.8.3"}
