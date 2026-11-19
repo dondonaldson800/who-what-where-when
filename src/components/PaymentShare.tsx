@@ -3,8 +3,8 @@ import { CreditCard, Mail, Copy, Settings2, X } from 'lucide-react';
 import { toast } from 'sonner';
 
 const KEY = 'lead-capture-payment-link';
-/** The live $19.99 one-time Stripe Payment Link for this app (Don's Empire Stripe account). */
-export const DEFAULT_PAYMENT_LINK = 'https://buy.stripe.com/7sY8wHeMj8Jl8YR0YkcMM00';
+/** The live $9.99 one-time Stripe Payment Link for this app (Don's Empire Stripe account). */
+export const DEFAULT_PAYMENT_LINK = 'https://buy.stripe.com/aFaaEPcEb7Fh2AtbCYcMM07';
 
 export type SavedLead = { name: string; email: string; value: number };
 
@@ -21,7 +21,7 @@ export function PaymentShare({ lead, onClose }: { lead: SavedLead; onClose: () =
         setDraft(saved);
         setEditing(false);
       } else {
-        // First run: default to the real $19.99 Stripe link and remember it.
+        // First run: default to the real $9.99 Stripe link and remember it.
         localStorage.setItem(KEY, DEFAULT_PAYMENT_LINK);
         setLink(DEFAULT_PAYMENT_LINK);
         setDraft(DEFAULT_PAYMENT_LINK);
@@ -66,7 +66,7 @@ export function PaymentShare({ lead, onClose }: { lead: SavedLead; onClose: () =
           <input value={draft} onChange={(e) => setDraft(e.target.value)} inputMode="url" placeholder="https://buy.stripe.com/…"
             className="h-12 w-full rounded-2xl border border-input bg-background px-4 text-base outline-none focus:border-foreground" />
           <button type="button" onClick={saveLink} className="h-12 rounded-full border border-foreground text-sm font-medium hover:bg-foreground hover:text-background">Save payment link</button>
-          <p className="text-xs text-muted-foreground">Your $19.99 Stripe payment link is filled in by default. Paste a different Stripe link here to change it — it's remembered on this device.</p>
+          <p className="text-xs text-muted-foreground">Your $9.99 Stripe payment link is filled in by default. Paste a different Stripe link here to change it — it's remembered on this device.</p>
         </div>
       ) : (
         <div className="mt-4 grid grid-cols-[1fr_auto_auto] gap-2">
