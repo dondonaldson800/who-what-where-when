@@ -100,7 +100,7 @@ export default function App() {
             </span>
           </label>
           <p className="mt-4 text-xs text-muted-foreground">
-            Index — $19.99. Leads are stored on this device only.
+            Index — $9.99. Leads are stored on this device only.
           </p>
         </section>
       </main>
